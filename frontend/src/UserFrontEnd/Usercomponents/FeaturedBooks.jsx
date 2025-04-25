@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Heart } from "react-feather"; // Ensure you have react-feather installed
+import { useDispatch, useSelector } from "react-redux"; // Import Redux hooks
+import { addToCart, removeFromCart } from "../redux/cartSlice"; // Corrected path
 
 export default function FeaturedBooks() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedBook, setSelectedBook] = useState(null);
   const [favorites, setFavorites] = useState([]); // State for favorites
+  const cart = useSelector((state) => state.cart.items); // Access cart state
+  const dispatch = useDispatch(); // Redux dispatch
 
   // Random reviews and ratings generator
   const generateRandomReviews = () => {
@@ -69,6 +73,8 @@ export default function FeaturedBooks() {
     );
   };
 
+  const isBookInCart = (id) => cart.some((item) => item._id === id); // Check if book is in cart
+
   return (
     <section className="px-6 py-16 bg-white">
       <h2 className="text-3xl font-bold text-center mb-10">Featured Books</h2>
@@ -94,9 +100,27 @@ export default function FeaturedBooks() {
               <p className="text-gray-600 mb-2">
                 <strong>Rating:</strong> {book.rating} / 5
               </p>
-              <button className="w-full py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600">
-                Add to Cart
-              </button>
+              {isBookInCart(book._id) ? (
+                <button
+                  className="w-full py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering the modal
+                    dispatch(removeFromCart(book._id));
+                  }}
+                >
+                  Remove from Cart
+                </button>
+              ) : (
+                <button
+                  className="w-full py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering the modal
+                    dispatch(addToCart(book));
+                  }}
+                >
+                  Add to Cart
+                </button>
+              )}
               <Heart
                 className={`absolute top-4 right-4 cursor-pointer transition ${
                   favorites.includes(book._id)

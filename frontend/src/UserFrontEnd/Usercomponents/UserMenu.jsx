@@ -31,6 +31,15 @@ export default function UserMenu() {
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
               Wishlist
             </li>
+            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+              Help Centre
+            </li>
+            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+              Deals
+            </li>
+            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+              Logout
+            </li>
           </ul>
         </div>
       )}
