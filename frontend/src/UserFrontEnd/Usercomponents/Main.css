@@ -1,0 +1,36 @@
+bookList {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  bookCard {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  bookImage {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  bookTitle {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+  }
+  bookAuthor {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  addToCartButton {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
