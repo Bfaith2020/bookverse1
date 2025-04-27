@@ -9,6 +9,7 @@ export default function FeaturedBooks() {
   const [loading, setLoading] = useState(false);
   const [selectedBook, setSelectedBook] = useState(null);
   const [favorites, setFavorites] = useState([]); // State for favorites
+  const [currentIndex, setCurrentIndex] = useState(0); // Index for carousel
   const cart = useSelector((state) => state.cart.items); // Access cart state
   const dispatch = useDispatch(); // Redux dispatch
 
@@ -58,6 +59,15 @@ export default function FeaturedBooks() {
       });
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex + 8 >= books.length ? 0 : prevIndex + 8
+      );
+    }, 120000); // Change every 2 minutes
+    return () => clearInterval(interval);
+  }, [books]);
+
   const handleBookClick = (book) => {
     setSelectedBook(book);
   };
@@ -75,6 +85,8 @@ export default function FeaturedBooks() {
 
   const isBookInCart = (id) => cart.some((item) => item._id === id); // Check if book is in cart
 
+  const displayedBooks = books.slice(currentIndex, currentIndex + 8);
+
   return (
     <section className="px-6 py-16 bg-white">
       <h2 className="text-3xl font-bold text-center mb-10">Featured Books</h2>
@@ -82,7 +94,7 @@ export default function FeaturedBooks() {
         <p className="text-center">Loading books...</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {books.map((book) => (
+          {displayedBooks.map((book) => (
             <div
               key={book._id}
               className="border rounded-2xl p-4 shadow hover:shadow-lg transition cursor-pointer relative"

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaShoppingCart, FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar"; // Import SearchBar
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -12,6 +13,7 @@ const Navbar = () => {
   return (
     <header className="flex items-center justify-between px-6 py-4 shadow-md bg-white sticky top-0 z-50">
       <div className="text-2xl font-bold text-pink-600">Bookverse</div>
+      <SearchBar /> {/* Added SearchBar */}
       <nav className="space-x-6 hidden md:flex">
         <a href="#" className="hover:text-pink-500">Home</a>
         <a href="#" className="hover:text-pink-500">Books</a>

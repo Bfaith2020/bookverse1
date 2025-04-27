@@ -44,7 +44,21 @@ router.post('/', async (request, response) => {
 // Route for Get All Books from database
 router.get('/', async (request, response) => {
   try {
-    const books = await Book.find({});
+    const { search } = request.query;
+    let books;
+
+    if (search && search.toLowerCase() !== "all") {
+      const searchRegex = new RegExp(search, 'i'); // Case-insensitive regex
+      books = await Book.find({
+        $or: [
+          { title: searchRegex },
+          { author: searchRegex },
+          { isbn: searchRegex },
+        ],
+      });
+    } else {
+      books = await Book.find({}); // Return all books if "all" is searched or no search term is provided
+    }
 
     return response.status(200).json({
       count: books.length,

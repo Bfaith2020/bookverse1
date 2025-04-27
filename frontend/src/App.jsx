@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'; // Corrected import
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import CreateBook from './pages/CreateBooks';
 import ShowBook from './pages/ShowBook';
@@ -9,10 +9,21 @@ import UserFrontEnd from './UserFrontEnd/UserFrontEnd'; // Adjusted the path to 
 import Cart from './UserFrontEnd/Usercomponents/Cart'; // Adjusted the path to match the likely correct location
 import { Provider } from "react-redux"; // Import Provider
 import store from "./UserFrontEnd/redux/store"; // Import the Redux store
+import SearchResults from './UserFrontEnd/Usercomponents/SearchResults'; // Adjusted the path to match the likely correct location
 
 const App = () => {
   const [isAdmin, setIsAdmin] = useState(null); // State to track if the user is an admin
-  const navigate = useNavigate(); // Hook to programmatically navigate
+  useEffect(() => {
+    const savedIsAdmin = localStorage.getItem("isAdmin");
+    if (savedIsAdmin !== null) {
+      setIsAdmin(JSON.parse(savedIsAdmin));
+    }
+  }, []);
+
+  const handleAdminResponse = (response) => {
+    setIsAdmin(response);
+    localStorage.setItem("isAdmin", JSON.stringify(response)); // Save the response in local storage
+  };
 
   if (isAdmin === null) {
     return (
@@ -23,7 +34,7 @@ const App = () => {
           </p>
           <button
             onClick={() => {
-              setIsAdmin(true);
+              handleAdminResponse(true)
             }}
             style={{
               margin: "10px",
@@ -40,8 +51,7 @@ const App = () => {
           </button>
           <button
             onClick={() => {
-              setIsAdmin(false);
-              navigate("/userfrontend"); // Navigate to the user frontend path
+              handleAdminResponse(false)
             }}
             style={{
               margin: "10px",
@@ -71,14 +81,34 @@ const App = () => {
             <Route path="/books/details/:id" element={<ShowBook />} />
             <Route path="/books/edit/:id" element={<EditBook />} />
             <Route path="/books/delete/:id" element={<DeleteBook />} />
+            <Route path="*" element={<Navigate to= "/" />} />
+            
           </>
         ) : (
           <>
             <Route path="/userfrontend" element={<UserFrontEnd />} />
             <Route path="/userfrontend/cart" element={<Cart />} />
+            <Route path="/userfrontend/searchresults" element={<SearchResults />} />
+            <Route path="*" element={<Navigate to="/userfrontend" />} />
           </>
         )}
       </Routes>
+
+      <button onClick={() => {
+        localStorage.removeItem("isAdmin");
+        setIsAdmin(null);
+      }}  style={{
+        position: "fixed",
+        bottom: "20px",
+        right: "20px",
+        padding: "10px 20px",
+        fontSize: "1rem",
+        backgroundColor: "#f44336",
+        color: "white",
+        border: "none",
+        borderRadius: "5px",
+        cursor: "pointer",
+      }}>  Reset Admin</button>
     </Provider>
   );
 };
