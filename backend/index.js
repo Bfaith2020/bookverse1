@@ -14,7 +14,10 @@ app.use(express.json());
 // Middleware for handling CORS POLICY
 app.use(
   cors({
-    origin: 'http://localhost:5173', // Update to match the frontend's development server
+    origin: [
+      'http://localhost:5173',
+      'http://localhost:5174'
+    ], // Allow both ports
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type'],
   })

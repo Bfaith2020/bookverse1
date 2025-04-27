@@ -1,0 +1,904 @@
+[
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "genre": "Fiction",
+    "description": "A novel about the serious issues of rape and racial inequality told through the eyes of a child.",
+    "image": "https://covers.openlibrary.org/b/id/8225261-L.jpg",
+    "price": 199.99,
+    "isbn": "978-0-06-112008-4"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "description": "A chilling prophecy about the future and a haunting tale of surveillance and totalitarianism.",
+    "image": "https://covers.openlibrary.org/b/id/7222246-L.jpg",
+    "price": 149.99,
+    "isbn": "978-0-452-28423-4"
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "genre": "Classic",
+    "description": "A portrait of the Jazz Age in all of its decadence and excess.",
+    "image": "https://covers.openlibrary.org/b/id/7352167-L.jpg",
+    "price": 129.99,
+    "isbn": "978-0-7432-7356-5"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "description": "A classic novel of manners, love, and misunderstanding.",
+    "image": "https://covers.openlibrary.org/b/id/8091016-L.jpg",
+    "price": 119.99,
+    "isbn": "978-0-19-283355-2"
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy",
+    "description": "Bilbo Baggins embarks on a journey to win a share of the treasure guarded by Smaug the dragon.",
+    "image": "https://covers.openlibrary.org/b/id/6979861-L.jpg",
+    "price": 159.99,
+    "isbn": "978-0-618-00221-3"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "genre": "Fiction",
+    "description": "A story about the events and misadventures in the life of a young man in 1950s America.",
+    "image": "https://covers.openlibrary.org/b/id/8226090-L.jpg",
+    "price": 199.99,
+    "isbn": "978-0-316-76948-0"
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Adventure",
+    "description": "A novel about a young shepherd's journey to realize his personal legend.",
+    "image": "https://covers.openlibrary.org/b/id/7222166-L.jpg",
+    "price": 179.99,
+    "isbn": "978-0-06-112241-5"
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "genre": "Philosophical Fiction",
+    "description": "A story about a man whose portrait ages while he remains young and beautiful.",
+    "image": "https://covers.openlibrary.org/b/id/8226110-L.jpg",
+    "price": 189.99,
+    "isbn": "978-0-14-143957-0"
+  },
+  {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "description": "A dystopian novel set in a technologically advanced future where humans are genetically bred and conditioned for their roles in society.",
+    "image": "https://covers.openlibrary.org/b/id/8226117-L.jpg",
+    "price": 199.99,
+    "isbn": "978-0-06-085052-4"
+  },
+  {
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "genre": "Dystopian",
+    "description": "A novel about a future society where books are banned and 'firemen' burn any that are found.",
+    "image": "https://covers.openlibrary.org/b/id/8226121-L.jpg",
+    "price": 149.99,
+    "isbn": "978-0-7432-7356-5"
+  },
+  {
+    "title": "The Road",
+    "author": "Cormac McCarthy",
+    "genre": "Post-Apocalyptic",
+    "description": "A father and son journey through a post-apocalyptic landscape.",
+    "image": "https://covers.openlibrary.org/b/id/8226124-L.jpg",
+    "price": 239.99,
+    "isbn": "978-0-307-26300-2"
+  },
+  {
+    "title": "Life of Pi",
+    "author": "Yann Martel",
+    "genre": "Adventure",
+    "description": "A young boy survives a shipwreck and is stranded on a lifeboat with a Bengal tiger.",
+    "image": "https://covers.openlibrary.org/b/id/8226127-L.jpg",
+    "price": 219.99,
+    "isbn": "978-0-15-100811-7"
+  },
+  {
+    "title": "The Kite Runner",
+    "author": "Khaled Hosseini",
+    "genre": "Historical Fiction",
+    "description": "A story of friendship and redemption that spans across decades and continents.",
+    "image": "https://covers.openlibrary.org/b/id/8226130-L.jpg",
+    "price": 189.99,
+    "isbn": "978-1-59448-000-3"
+  },
+  {
+    "title": "The Book Thief",
+    "author": "Markus Zusak",
+    "genre": "Historical Fiction",
+    "description": "A novel set in Nazi Germany narrated by Death.",
+    "image": "https://covers.openlibrary.org/b/id/8226133-L.jpg",
+    "price": 199.99,
+    "isbn": "978-0-552-15041-5"
+  },
+  {
+    "title": "The Fault in Our Stars",
+    "author": "John Green",
+    "genre": "Young Adult",
+    "description": "A love story between two teenagers who meet at a cancer support group.",
+    "image": "https://covers.openlibrary.org/b/id/8226136-L.jpg",
+    "price": 159.99,
+    "isbn": "978-0-525-47881-2"
+  },
+  {
+    "title": "Eleanor Oliphant Is Completely Fine",
+    "author": "Gail Honeyman",
+    "genre": "Contemporary Fiction",
+    "description": "A socially awkward woman develops feelings for a musician she has never met.",
+    "image": "https://covers.openlibrary.org/b/id/8226140-L.jpg",
+    "price": 179.99,
+    "isbn": "978-0-525-57623-6"
+  },
+  {
+    "title": "Where the Crawdads Sing",
+    "author": "Delia Owens",
+    "genre": "Mystery",
+    "description": "A coming-of-age story and a mystery about a young girl who raises herself in the marshes of the South.",
+    "image": "https://covers.openlibrary.org/b/id/8226143-L.jpg",
+    "price": 189.99,
+    "isbn": "978-0-7352-2209-0"
+  },
+  {
+    "title": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "genre": "Psychological Thriller",
+    "description": "A psychological thriller about a woman who stops speaking after committing a violent act.",
+    "image": "https://covers.openlibrary.org/b/id/8226146-L.jpg",
+    "price": 199.99,
+    "isbn": "978-1-9848-0000-3"
+  },
+  {
+    "title": "The Guest List",
+    "author": "Lucy Foley",
+    "genre": "Mystery",
+    "description": "A wedding celebration on a remote Irish island turns deadly in this twisty mystery.",
+    "image": "https://covers.openlibrary.org/b/id/8226150-L.jpg",
+    "price": 179.99,
+    "isbn": "978-0-06-286893-0"
+  },
+  {
+    "title": "The Chain",
+    "author": "Adrian McKinty",
+    "genre": "Thriller",
+    "description": "A mother is forced to kidnap another child to save her own in this relentless thriller.",
+    "image": "https://covers.openlibrary.org/b/id/8226153-L.jpg",
+    "price": 169.99,
+    "isbn": "978-1-250-22310-1"
+  },
+  {
+    "title": "The Institute",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "description": "A group of children with special talents are taken to a mysterious institution where they are subjected to experiments.",
+    "image": "https://covers.openlibrary.org/b/id/8226156-L.jpg",
+    "price": 209.99,
+    "isbn": "978-1-9821-2000-8"
+  },
+  {
+    "title": "The Outsider",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "description": "A town is rocked by the gruesome murder of a local boy and the prime suspect is a well-liked teacher and little league coach.",
+    "image": "https://covers.openlibrary.org/b/id/8226159-L.jpg",
+    "price": 219.99,
+    "isbn": "978-1-9821-2001-5"
+  },
+  {
+    "title": "The Shining",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "description": "A family heads to an isolated hotel for the winter where an evil presence influences the father into violence.",
+    "image": "https://covers.openlibrary.org/b/id/8226162-L.jpg",
+    "price": 229.99,
+    "isbn": "978-0-385-12167-5"
+  },
+  {
+    "title": "Misery",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "description": "A famous author is held captive by a psychotic fan after a car accident.",
+    "image": "https://covers.openlibrary.org/b/id/8226165-L.jpg",
+    "price": 239.99,
+    "isbn": "978-0-385-12168-2"
+  },
+  {
+    "title": "The Stand",
+    "author": "Stephen King",
+    "genre": "Horror",
+    "description": "After a pandemic kills 99% of the human population, the survivors face a new reality and a malevolent being.",
+    "image": "https://covers.openlibrary.org/b/id/8226168-L.jpg",
+    "price": 249.99,
+    "isbn": "978-0-385-12169-9"
+  },
+  {
+    "title": "The Dark Tower: The Gunslinger",
+    "author": "Stephen King",
+    "genre": "Fantasy",
+    "description": "The first book in Stephen King's epic series, following the last gunslinger as he pursues the man in black.",
+    "image": "https://covers.openlibrary.org/b/id/8226171-L.jpg",
+    "price": 259.99,
+    "isbn": "978-0-845-35694-0"
+  },
+  {
+    "title": "The Eye of the World",
+    "author": "Robert Jordan",
+    "genre": "Fantasy",
+    "description": "The first book in the Wheel of Time series, a tale of a young man's journey to save the world.",
+    "image": "https://covers.openlibrary.org/b/id/8226174-L.jpg",
+    "price": 269.99,
+    "isbn": "978-0-812-50124-0"
+  },
+  {
+    "title": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "genre": "Fantasy",
+    "description": "The first novel in the Kingkiller Chronicle, telling the story of a young man who grows up to be a notorious magician.",
+    "image": "https://covers.openlibrary.org/b/id/8226177-L.jpg",
+    "price": 279.99,
+    "isbn": "978-0-756-40022-1"
+  },
+  {
+    "title": "Good Omens",
+    "author": "Neil Gaiman and Terry Pratchett",
+    "genre": "Fantasy",
+    "description": "The unlikely partnership between an angel and a demon to prevent the apocalypse.",
+    "image": "https://covers.openlibrary.org/b/id/8226180-L.jpg",
+    "price": 289.99,
+    "isbn": "978-0-06-085398-3"
+  },
+  {
+    "title": "American Gods",
+    "author": "Neil Gaiman",
+    "genre": "Fantasy",
+    "description": "A man is caught in a battle between the old gods of mythology and the new gods of modern society.",
+    "image": "https://covers.openlibrary.org/b/id/8226183-L.jpg",
+    "price": 299.99,
+    "isbn": "978-0-06-257223-1"
+  },
+  {
+    "title": "The Amazing Adventures of Kavalier & Clay",
+    "author": "Michael Chabon",
+    "genre": "Historical Fiction",
+    "description": "The story of two Jewish cousins before, during, and after World War II as they create a popular comic book hero.",
+    "image": "https://covers.openlibrary.org/b/id/8226186-L.jpg",
+    "price": 309.99,
+    "isbn": "978-0-06-027580-4"
+  },
+  {
+    "title": "The Brief Wondrous Life of Oscar Wao",
+    "author": "Junot Díaz",
+    "genre": "Historical Fiction",
+    "description": "A Dominican American boy's life is affected by the curse that has plagued his family for generations.",
+    "image": "https://covers.openlibrary.org/b/id/8226189-L.jpg",
+    "price": 319.99,
+    "isbn": "978-1-59448-000-3"
+  },
+  {
+    "title": "The Night Circus",
+    "author": "Erin Morgenstern",
+    "genre": "Fantasy",
+    "description": "A magical competition between two young illusionists at a mysterious circus that appears only at night.",
+    "image": "https://covers.openlibrary.org/b/id/8226192-L.jpg",
+    "price": 329.99,
+    "isbn": "978-0-385-52788-7"
+  },
+  {
+    "title": "The Goldfinch",
+    "author": "Donna Tartt",
+    "genre": "Literary Fiction",
+    "description": "A young boy's life is turned upside down after surviving an accident that kills his mother.",
+    "image": "https://covers.openlibrary.org/b/id/8226195-L.jpg",
+    "price": 339.99,
+    "isbn": "978-0-7704-3629-8"
+  },
+  {
+    "title": "The Underground Railroad",
+    "author": "Colson Whitehead",
+    "genre": "Historical Fiction",
+    "description": "A young woman's desperate bid for freedom from slavery through the Underground Railroad.",
+    "image": "https://covers.openlibrary.org/b/id/8226198-L.jpg",
+    "price": 349.99,
+    "isbn": "978-0-345-80432-8"
+  },
+  {
+    "title": "The Overstory",
+    "author": "Richard Powers",
+    "genre": "Literary Fiction",
+    "description": "A sweeping, impassioned work of activism and resistance that connects the lives of a diverse cast of characters.",
+    "image": "https://covers.openlibrary.org/b/id/8226201-L.jpg",
+    "price": 359.99,
+    "isbn": "978-0-393-24024-8"
+  },
+  {
+    "title": "A Little Life",
+    "author": "Hanya Yanagihara",
+    "genre": "Literary Fiction",
+    "description": "A novel about the enduring bonds of friendship and the ways in which we are damaged by life and by each other.",
+    "image": "https://covers.openlibrary.org/b/id/8226204-L.jpg",
+    "price": 369.99,
+    "isbn": "978-1-101-87496-3"
+  },
+  {
+    "title": "The Luminaries",
+    "author": "Eleanor Catton",
+    "genre": "Historical Fiction",
+    "description": "A novel set in 1866 during the New Zealand gold rush, involving a young prospector and a series of mysterious events.",
+    "image": "https://covers.openlibrary.org/b/id/8226207-L.jpg",
+    "price": 379.99,
+    "isbn": "978-1-4472-5689-1"
+  },
+  {
+    "title": "The Bone Clocks",
+    "author": "David Mitchell",
+    "genre": "Fantasy",
+    "description": "A narrative that spans decades and continents, following a young woman with a rare gift.",
+    "image": "https://covers.openlibrary.org/b/id/8226210-L.jpg",
+    "price": 389.99,
+    "isbn": "978-1-59463-280-3"
+  },
+  {
+    "title": "Cloud Atlas",
+    "author": "David Mitchell",
+    "genre": "Literary Fiction",
+    "description": "A novel composed of six interconnected stories that take the reader on a journey through time and space.",
+    "image": "https://covers.openlibrary.org/b/id/8226213-L.jpg",
+    "price": 399.99,
+    "isbn": "978-1-59463-280-3"
+  },
+  {
+    "title": "The Wind-Up Bird Chronicle",
+    "author": "Haruki Murakami",
+    "genre": "Magical Realism",
+    "description": "A surreal tale of a Tokyo man’s quest to find his missing wife, which leads him into a bizarre alternate world.",
+    "image": "https://covers.openlibrary.org/b/id/8226216-L.jpg",
+    "price": 409.99,
+    "isbn": "978-1-59463-280-3"
+  },
+  {
+    "title": "Kafka on the Shore",
+    "author": "Haruki Murakami",
+    "genre": "Magical Realism",
+    "description": "A complex and surreal novel following a teenage boy and an aging man as their paths cross in unexpected ways.",
+    "image": "https://covers.openlibrary.org/b/id/8226219-L.jpg",
+    "price": 419.99,
+    "isbn": "978-1-59463-280-3"
+  },
+  {
+    "title": "Norwegian Wood",
+    "author": "Haruki Murakami",
+    "genre": "Literary Fiction",
+    "description": "A poignant story of one college student’s crush on an older woman, set against the backdrop of 1960s Tokyo.",
+    "image": "https://covers.openlibrary.org/b/id/8226222-L.jpg",
+    "price": 429.99,
+    "isbn": "978-1-59463-280-3"
+  },
+  {
+    "title": "The Bell Jar",
+    "author": "Sylvia Plath",
+    "genre": "Classic",
+    "description": "A semi-autobiographical novel about a young woman's descent into mental illness.",
+    "image": "https://covers.openlibrary.org/b/id/8226225-L.jpg",
+    "price": 439.99,
+    "isbn": "978-0-06-083102-7"
+  },
+  {
+    "title": "The Handmaid's Tale",
+    "author": "Margaret Atwood",
+    "genre": "Dystopian",
+    "description": "A dystopian novel set in a totalitarian society that treats women as property of the state.",
+    "image": "https://covers.openlibrary.org/b/id/8226228-L.jpg",
+    "price": 449.99,
+    "isbn": "978-0-385-72141-2"
+  },
+  {
+    "title": "The Testaments",
+    "author": "Margaret Atwood",
+    "genre": "Dystopian",
+    "description": "The sequel to The Handmaid's Tale, set fifteen years later.",
+    "image": "https://covers.openlibrary.org/b/id/8226231-L.jpg",
+    "price": 459.99,
+    "isbn": "978-0-385-72142-9"
+  },
+  {
+    "title": "The Road to Unfreedom",
+    "author": "Timothy Snyder",
+    "genre": "Non-fiction",
+    "description": "A powerful analysis of the rise of authoritarianism in the world today.",
+    "image": "https://covers.openlibrary.org/b/id/8226234-L.jpg",
+    "price": 469.99,
+    "isbn": "978-0-8050-1000-7"
+  },
+  {
+    "title": "Sapiens: A Brief History of Humankind",
+    "author": "Yuval Noah Harari",
+    "genre": "Non-fiction",
+    "description": "An exploration of humankind's history from the Stone Age to the modern age.",
+    "image": "https://covers.openlibrary.org/b/id/8226237-L.jpg",
+    "price": 479.99,
+    "isbn": "978-0-06-231609-7"
+  },
+  {
+    "title": "Homo Deus: A Brief History of Tomorrow",
+    "author": "Yuval Noah Harari",
+    "genre": "Non-fiction",
+    "description": "An exploration of the future of humankind and the potential directions of our species.",
+    "image": "https://covers.openlibrary.org/b/id/8226240-L.jpg",
+    "price": 489.99,
+    "isbn": "978-0-06-246431-6"
+  },
+  {
+    "title": "21 Lessons for the 21st Century",
+    "author": "Yuval Noah Harari",
+    "genre": "Non-fiction",
+    "description": "A series of essays on the most urgent issues facing humanity today.",
+    "image": "https://covers.openlibrary.org/b/id/8226243-L.jpg",
+    "price": 499.99,
+    "isbn": "978-0-06-286246-4"
+  },
+  {
+    "title": "The Body: A Guide for Occupants",
+    "author": "Bill Bryson",
+    "genre": "Non-fiction",
+    "description": "A journey through the human body, exploring the mysteries of how we function.",
+    "image": "https://covers.openlibrary.org/b/id/8226246-L.jpg",
+    "price": 509.99,
+    "isbn": "978-0-385-54280-4"
+  },
+  {
+    "title": "A Short History of Nearly Everything",
+    "author": "Bill Bryson",
+    "genre": "Non-fiction",
+    "description": "An exploration of the history of science and the universe.",
+    "image": "https://covers.openlibrary.org/b/id/8226249-L.jpg",
+    "price": 519.99,
+    "isbn": "978-0-7679-0818-0"
+  },
+  {
+    "title": "The Elements of Style",
+    "author": "William Strunk Jr. and E.B. White",
+    "genre": "Non-fiction",
+    "description": "A classic manual of the principles of English style and usage.",
+    "image": "https://covers.openlibrary.org/b/id/8226252-L.jpg",
+    "price": 529.99,
+    "isbn": "978-0-205-30902-3"
+  },
+  {
+    "title": "On Writing: A Memoir of the Craft",
+    "author": "Stephen King",
+    "genre": "Non-fiction",
+    "description": "Part memoir, part master class by one of the bestselling authors of all time, this is a revealing and practical view of the writer's craft.",
+    "image": "https://covers.openlibrary.org/b/id/8226255-L.jpg",
+    "price": 539.99,
+    "isbn": "978-1-4391-5682-0"
+  },
+  {
+    "title": "The Artist's Way: A Spiritual Path to Higher Creativity",
+    "author": "Julia Cameron",
+    "genre": "Non-fiction",
+    "description": "A course in discovering and recovering your creative self.",
+    "image": "https://covers.openlibrary.org/b/id/8226258-L.jpg",
+    "price": 549.99,
+    "isbn": "978-0-87477-639-6"
+  },
+  {
+    "title": "Bird by Bird: Some Instructions on Writing and Life",
+    "author": "Anne Lamott",
+    "genre": "Non-fiction",
+    "description": "A step-by-step guide on writing and life.",
+    "image": "https://covers.openlibrary.org/b/id/8226261-L.jpg",
+    "price": 559.99,
+    "isbn": "978-0-06-273502-8"
+  },
+  {
+    "title": "The War of Art: Break Through the Blocks and Win Your Inner Creative Battles",
+    "author": "Steven Pressfield",
+    "genre": "Non-fiction",
+    "description": "A must-read for any writer or artist, this book identifies the enemy of creativity and shows how to defeat it.",
+    "image": "https://covers.openlibrary.org/b/id/8226264-L.jpg",
+    "price": 569.99,
+    "isbn": "978-1-59030-400-3"
+  },
+  {
+    "title": "The Creative Habit: Learn It and Use It for Life",
+    "author": "Twyla Tharp",
+    "genre": "Non-fiction",
+    "description": "A practical guide to creativity by one of the most successful choreographers in the world.",
+    "image": "https://covers.openlibrary.org/b/id/8226267-L.jpg",
+    "price": 579.99,
+    "isbn": "978-0-7432-7367-1"
+  },
+  {
+    "title": "Steal Like an Artist: 10 Things Nobody Told You About Being Creative",
+    "author": "Austin Kleon",
+    "genre": "Non-fiction",
+    "description": "A manifesto for the digital age, this book offers ten transformative principles that will help you discover your artistic side and build a more creative life.",
+    "image": "https://covers.openlibrary.org/b/id/8226270-L.jpg",
+    "price": 589.99,
+    "isbn": "978-0-7611-5772-9"
+  },
+  {
+    "title": "The Accidental Creative: How to Be Brilliant at a Moment's Notice",
+    "author": "Todd Henry",
+    "genre": "Non-fiction",
+    "description": "A guide to being creative under pressure.",
+    "image": "https://covers.openlibrary.org/b/id/8226273-L.jpg",
+    "price": 599.99,
+    "isbn": "978-1-59184-555-5"
+  },
+  {
+    "title": "The 7 Habits of Highly Effective People: Powerful Lessons in Personal Change",
+    "author": "Stephen R. Covey",
+    "genre": "Non-fiction",
+    "description": "A holistic, principle-centered approach for solving personal and professional problems.",
+    "image": "https://covers.openlibrary.org/b/id/8226276-L.jpg",
+    "price": 609.99,
+    "isbn": "978-0-7432-6951-4"
+  },
+  {
+    "title": "How to Win Friends and Influence People",
+    "author": "Dale Carnegie",
+    "genre": "Non-fiction",
+    "description": "A perennial bestseller, this book offers rock-solid, time-tested advice on building relationships and winning people over.",
+    "image": "https://covers.openlibrary.org/b/id/8226279-L.jpg",
+    "price": 619.99,
+    "isbn": "978-0-671-02763-7"
+  },
+  {
+    "title": "The Power of Habit: Why We Do What We Do in Life and Business",
+    "author": "Charles Duhigg",
+    "genre": "Non-fiction",
+    "description": "An exploration of the science of habit formation in our lives, businesses, and societies.",
+    "image": "https://covers.openlibrary.org/b/id/8226282-L.jpg",
+    "price": 629.99,
+    "isbn": "978-0-812-28097-1"
+  },
+  {
+    "title": "Mindset: The New Psychology of Success",
+    "author": "Carol S. Dweck",
+    "genre": "Non-fiction",
+    "description": "A psychologist shows how having a 'fixed' vs. 'growth' mindset can significantly impact all areas of your life.",
+    "image": "https://covers.openlibrary.org/b/id/8226285-L.jpg",
+    "price": 639.99,
+    "isbn": "978-1-59184-620-0"
+  },
+  {
+    "title": "Grit: The Power of Passion and Perseverance",
+    "author": "Angela Duckworth",
+    "genre": "Non-fiction",
+    "description": "A groundbreaking book that examines the power of passion and perseverance in achieving long-term goals.",
+    "image": "https://covers.openlibrary.org/b/id/8226288-L.jpg",
+    "price": 649.99,
+    "isbn": "978-1-59184-624-8"
+  },
+  {
+    "title": "The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life",
+    "author": "Mark Manson",
+    "genre": "Non-fiction",
+    "description": "A self-help guide that uses humor and blunt honesty to offer advice on living a meaningful life.",
+    "image": "https://covers.openlibrary.org/b/id/8226291-L.jpg",
+    "price": 659.99,
+    "isbn": "978-0-06-245771-0"
+  },
+  {
+    "title": "You Are a Badass: How to Stop Doubting Your Greatness and Start Living an Awesome Life",
+    "author": "Jen Sincero",
+    "genre": "Non-fiction",
+    "description": "A blunt, funny, and inspiring guide to living a life you love.",
+    "image": "https://covers.openlibrary.org/b/id/8226294-L.jpg",
+    "price": 669.99,
+    "isbn": "978-0-7611-5772-9"
+  },
+  {
+    "title": "The Confidence Code: The Science and Art of Self-Assurance---What Women Should Know",
+    "author": "Katty Kay and Claire Shipman",
+    "genre": "Non-fiction",
+    "description": "A guide for women on how to achieve self-assurance and confidence in their personal and professional lives.",
+    "image": "https://covers.openlibrary.org/b/id/8226297-L.jpg",
+    "price": 679.99,
+    "isbn": "978-0-06-223062-2"
+  },
+  {
+    "title": "Presence: Bringing Your Boldest Self to Your Biggest Challenges",
+    "author": "Amy Cuddy",
+    "genre": "Non-fiction",
+    "description": "A guide to achieving success by being your authentic self.",
+    "image": "https://covers.openlibrary.org/b/id/8226300-L.jpg",
+    "price": 689.99,
+    "isbn": "978-1-101-87496-3"
+  },
+  {
+    "title": "Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead",
+    "author": "Brené Brown",
+    "genre": "Non-fiction",
+    "description": "A transformative book on the power of vulnerability in our lives.",
+    "image": "https://covers.openlibrary.org/b/id/8226303-L.jpg",
+    "price": 699.99,
+    "isbn": "978-1-59240-733-0"
+  },
+  {
+    "title": "The Gifts of Imperfection: Let Go of Who You Think You're Supposed to Be and Embrace Who You Are",
+    "author": "Brené Brown",
+    "genre": "Non-fiction",
+    "description": "A guide to embracing your imperfections and living authentically.",
+    "image": "https://covers.openlibrary.org/b/id/8226306-L.jpg",
+    "price": 709.99,
+    "isbn": "978-1-59240-124-6"
+  },
+  {
+    "title": "The 5 AM Club: Own Your Morning. Elevate Your Life.",
+    "author": "Robin Sharma",
+    "genre": "Non-fiction",
+    "description": "A guide to improving your life by changing your morning routine.",
+    "image": "https://covers.openlibrary.org/b/id/8226309-L.jpg",
+    "price": 719.99,
+    "isbn": "978-1-63265-027-4"
+  },
+  {
+    "title": "Can't Hurt Me: Master Your Mind and Defy the Odds",
+    "author": "David Goggins",
+    "genre": "Non-fiction",
+    "description": "The incredible life story of a former Navy SEAL and ultra-endurance athlete.",
+    "image": "https://covers.openlibrary.org/b/id/8226312-L.jpg",
+    "price": 729.99,
+    "isbn": "978-1-9821-2002-2"
+  },
+  {
+    "title": "The Miracle Morning: The Not-So-Obvious Secret Guaranteed to Transform Your Life (Before 8AM)",
+    "author": "Hal Elrod",
+    "genre": "Non-fiction",
+    "description": "A guide to transforming your life by changing your morning routine.",
+    "image": "https://covers.openlibrary.org/b/id/8226315-L.jpg",
+    "price": 739.99,
+    "isbn": "978-1-947-16000-3"
+  },
+  {
+    "title": "The 10X Rule: The Only Difference Between Success and Failure",
+    "author": "Grant Cardone",
+    "genre": "Non-fiction",
+    "description": "A guide to achieving success by taking massive action.",
+    "image": "https://covers.openlibrary.org/b/id/8226318-L.jpg",
+    "price": 749.99,
+    "isbn": "978-1-59183-299-4"
+  },
+  {
+    "title": "The Slight Edge: Turning Simple Disciplines into Massive Success and Happiness",
+    "author": "Jeff Olson",
+    "genre": "Non-fiction",
+    "description": "A guide to success and happiness through simple daily disciplines.",
+    "image": "https://covers.openlibrary.org/b/id/8226321-L.jpg",
+    "price": 759.99,
+    "isbn": "978-1-59184-626-2"
+  },
+  {
+    "title": "The Compound Effect: Jumpstart Your Income, Your Life, Your Success",
+    "author": "Darren Hardy",
+    "genre": "Non-fiction",
+    "description": "A guide to using the compound effect to achieve success in all areas of your life.",
+    "image": "https://covers.openlibrary.org/b/id/8226324-L.jpg",
+    "price": 769.99,
+    "isbn": "978-1-59184-627-9"
+  },
+  {
+    "title": "The Richest Man in Babylon",
+    "author": "George S. Clason",
+    "genre": "Non-fiction",
+    "description": "A classic book on financial wisdom and personal finance.",
+    "image": "https://covers.openlibrary.org/b/id/8226327-L.jpg",
+    "price": 779.99,
+    "isbn": "978-0-451-52932-1"
+  },
+  {
+    "title": "The Millionaire Next Door: The Surprising Secrets of America's Wealthy",
+    "author": "Thomas J. Stanley and William D. Danko",
+    "genre": "Non-fiction",
+    "description": "A study of the habits and traits of America's wealthy.",
+    "image": "https://covers.openlibrary.org/b/id/8226330-L.jpg",
+    "price": 789.99,
+    "isbn": "978-0-7432-7356-5"
+  },
+  {
+    "title": "The Automatic Millionaire: A Powerful One-Step Plan to Live and Finish Rich",
+    "author": "David Bach",
+    "genre": "Non-fiction",
+    "description": "A simple plan that can help you become a millionaire.",
+    "image": "https://covers.openlibrary.org/b/id/8226333-L.jpg",
+    "price": 799.99,
+    "isbn": "978-0-7615-3657-8"
+  },
+  {
+    "title": "Rich Dad Poor Dad: What the Rich Teach Their Kids About Money That the Poor and the Middle Class Do Not!",
+    "author": "Robert T. Kiyosaki",
+    "genre": "Non-fiction",
+    "description": "A book on personal finance and investing.",
+    "image": "https://covers.openlibrary.org/b/id/8226336-L.jpg",
+    "price": 809.99,
+    "isbn": "978-0-7852-1198-9"
+  },
+  {
+    "title": "The Barefoot Investor: The Only Money Guide You'll Ever Need",
+    "author": "Scott Pape",
+    "genre": "Non-fiction",
+    "description": "A guide to financial freedom and independence.",
+    "image": "https://covers.openlibrary.org/b/id/8226339-L.jpg",
+    "price": 819.99,
+    "isbn": "978-0-7322-9344-0"
+  },
+  {
+    "title": "The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness",
+    "author": "Morgan Housel",
+    "genre": "Non-fiction",
+    "description": "A book on the behavioral finance and the psychology of investing.",
+    "image": "https://covers.openlibrary.org/b/id/8226342-L.jpg",
+    "price": 829.99,
+    "isbn": "978-0-7352-2209-0"
+  },
+  {
+    "title": "The Intelligent Investor: The Definitive Book on Value Investing",
+    "author": "Benjamin Graham",
+    "genre": "Non-fiction",
+    "description": "A book on value investing and stock market principles.",
+    "image": "https://covers.openlibrary.org/b/id/8226345-L.jpg",
+    "price": 839.99,
+    "isbn": "978-0-06-075261-3"
+  },
+  {
+    "title": "Security Analysis: Sixth Edition, Foreword by Warren Buffett",
+    "author": "Benjamin Graham and David Dodd",
+    "genre": "Non-fiction",
+    "description": "A comprehensive guide to financial analysis and security valuation.",
+    "image": "https://covers.openlibrary.org/b/id/8226348-L.jpg",
+    "price": 849.99,
+    "isbn": "978-0-07-024882-2"
+  },
+  {
+    "title": "The Little Book of Common Sense Investing: The Only Way to Guarantee Your Fair Share of Stock Market Returns",
+    "author": "John C. Bogle",
+    "genre": "Non-fiction",
+    "description": "A guide to investing in index funds and a long-term investment strategy.",
+    "image": "https://covers.openlibrary.org/b/id/8226351-L.jpg",
+    "price": 859.99,
+    "isbn": "978-0-470-23378-1"
+  },
+  {
+    "title": "The Big Short: Inside the Doomsday Machine",
+    "author": "Michael Lewis",
+    "genre": "Non-fiction",
+    "description": "An exploration of the causes of the 2008 financial crisis.",
+    "image": "https://covers.openlibrary.org/b/id/8226354-L.jpg",
+    "price": 869.99,
+    "isbn": "978-0-393-06723-0"
+  },
+  {
+    "title": "Flash Boys: A Wall Street Revolt",
+    "author": "Michael Lewis",
+    "genre": "Non-fiction",
+    "description": "A look at the rise of high-frequency trading in the US stock market.",
+    "image": "https://covers.openlibrary.org/b/id/8226357-L.jpg",
+    "price": 879.99,
+    "isbn": "978-0-393-06724-7"
+  },
+  {
+    "title": "Liar's Poker: Rising Through the Wreckage on Wall Street",
+    "author": "Michael Lewis",
+    "genre": "Non-fiction",
+    "description": "A semi-autobiographical account of the author's experiences as a bond salesman on Wall Street.",
+    "image": "https://covers.openlibrary.org/b/id/8226360-L.jpg",
+    "price": 889.99,
+    "isbn": "978-0-394-58840-6"
+  },
+  {
+    "title": "The New New Thing: A Silicon Valley Story",
+    "author": "Michael Lewis",
+    "genre": "Non-fiction",
+    "description": "The biography of Jim Clark, the founder of Netscape and a Silicon Valley legend.",
+    "image": "https://covers.openlibrary.org/b/id/8226363-L.jpg",
+    "price": 899.99,
+    "isbn": "978-0-679-42801-0"
+  },
+  {
+    "title": "The Everything Store: Jeff Bezos and the Age of Amazon",
+    "author": "Brad Stone",
+    "genre": "Non-fiction",
+    "description": "The definitive account of the birth and growth of Amazon.",
+    "image": "https://covers.openlibrary.org/b/id/8226366-L.jpg",
+    "price": 909.99,
+    "isbn": "978-0-316-31696-5"
+  },
+  {
+    "title": "Steve Jobs",
+    "author": "Walter Isaacson",
+    "genre": "Non-fiction",
+    "description": "The exclusive biography of Steve Jobs, based on more than forty interviews with Jobs conducted over two years.",
+    "image": "https://covers.openlibrary.org/b/id/8226369-L.jpg",
+    "price": 919.99,
+    "isbn": "978-1-4516-4853-9"
+  },
+  {
+    "title": "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",
+    "author": "Ashlee Vance",
+    "genre": "Non-fiction",
+    "description": "The biography of Elon Musk, the entrepreneur behind SpaceX, Tesla, and SolarCity.",
+    "image": "https://covers.openlibrary.org/b/id/8226372-L.jpg",
+    "price": 929.99,
+    "isbn": "978-0-06-246328-9"
+  },
+  {
+    "title": "The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution",
+    "author": "Walter Isaacson",
+    "genre": "Non-fiction",
+    "description": "The story of the people who created the computer and the Internet.",
+    "image": "https://covers.openlibrary.org/b/id/8226375-L.jpg",
+    "price": 939.99,
+    "isbn": "978-1-4516-4854-6"
+  },
+  {
+    "title": "The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography",
+    "author": "Simon Singh",
+    "genre": "Non-fiction",
+    "description": "A history of codes and code-breaking.",
+    "image": "https://covers.openlibrary.org/b/id/8226378-L.jpg",
+    "price": 949.99,
+    "isbn": "978-0-385-49531-8"
+  },
+  {
+    "title": "The Imitation Game: Alan Turing Decoded",
+    "author": "Andrew Hodges",
+    "genre": "Non-fiction",
+    "description": "The biography of Alan Turing, the mathematician and logician who helped crack the Enigma code during World War II.",
+    "image": "https://covers.openlibrary.org/b/id/8226381-L.jpg",
+    "price": 959.99,
+    "isbn": "978-0-713-99920-1"
+  },
+  {
+    "title": "The Man Who Knew: The Life and Times of Alan Greenspan",
+    "author": "Martin Anderson",
+    "genre": "Non-fiction",
+    "description": "A biography of Alan Greenspan, the former chairman of the Federal Reserve.",
+    "image": "https://covers.openlibrary.org/b/id/8226384-L.jpg",
+    "price": 969.99,
+    "isbn": "978-0-7432-7356-5"
+  },
+  {
+    "title": "The Big Short: Inside the Doomsday Machine",
+    "author": "Michael Lewis",
+    "genre": "Non-fiction",
+    "description": "The story of the housing and credit bubble and the financial crisis of 2007-2008.",
+    "image": "https://covers.openlibrary.org/b/id/8226387-L.jpg",
+    "price": 979.99,
+    "isbn": "978-0-393-06723-0"
+  },
+  {
+    "title": "Too Big to Fail: The Inside Story of How Wall Street and Washington Fought to Save the Financial System from Crisis—and What It Cost Us",
+    "author": "Andrew Ross Sorkin",
+    "genre": "Non-fiction",
+    "description": "The inside story of the financial crisis of 2008.",
+    "image": "https://covers.openlibrary.org/b/id/8226390-L.jpg",
+    "price": 989.99,
+    "isbn": "978-0-670-02265-3"
+  },
+  {
+    "title": "The Ascent of Money: A Financial History of the World",
+    "author": "Niall Ferguson",
+    "genre": "Non-fiction",
+    "description": "A history of money, credit, and banking from ancient times to the present day.",
+    "image": "https://covers.openlibrary.org/b/id/8226393-L.jpg",
+    "price": 999.99,
+    "isbn": "978-0-393-06724-7"
+  }
+]
+
+

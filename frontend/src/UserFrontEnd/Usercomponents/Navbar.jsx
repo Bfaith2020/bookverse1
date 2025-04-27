@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FaShoppingCart, FaUserCircle } from "react-icons/fa";
-import { Link } from "react-router-dom"; // Import Link from React Router
+import { Link } from "react-router-dom";
 
-const Navbar = ({ wishlist }) => {
+const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -18,24 +18,15 @@ const Navbar = ({ wishlist }) => {
         <a href="#" className="hover:text-pink-500">Categories</a>
         <a href="#" className="hover:text-pink-500">Contact</a>
       </nav>
-      <div className="flex items-center gap-4">
-        {/* Search Bar */}
-        <input
-          type="text"
-          placeholder="Search books..."
-          className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
-        />
-        {/* Icons */}
-
-        <Link to="/userfrontend/cart" >
-        <FaShoppingCart className="cursor-pointer hover:text-pink-600" /></Link>
+      <div className="flex items-center gap-4 relative">
+        <Link to="/userfrontend/cart">
+          <FaShoppingCart className="cursor-pointer hover:text-pink-600" />
+        </Link>
         <FaUserCircle
           className="cursor-pointer hover:text-pink-600"
           onClick={toggleSidebar}
         />
       </div>
-
-      {/* Sidebar */}
       <div
         className={`fixed top-0 right-0 h-full w-48 bg-white shadow-lg transform transition-transform duration-300 ${
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
@@ -50,14 +41,9 @@ const Navbar = ({ wishlist }) => {
         <ul className="mt-16 space-y-4 px-6 text-gray-700">
           <li className="hover:text-pink-500 cursor-pointer">Personal Info</li>
           <li className="hover:text-pink-500 cursor-pointer">Order History</li>
-          <li className="hover:text-pink-500 cursor-pointer">
-            <Link to="/wishlist" onClick={toggleSidebar}>
-              Wishlist
-            </Link>
-          </li>
+          <li className="hover:text-pink-500 cursor-pointer">Wishlist</li>
           <li className="hover:text-pink-500 cursor-pointer">Help Centre</li>
           <li className="hover:text-pink-500 cursor-pointer">Deals</li>
-          <li className="hover:text-pink-500 cursor-pointer">Admin</li>
           <li className="hover:text-pink-500 cursor-pointer">Logout</li>
         </ul>
       </div>

@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart } from "../redux/cartSlice"; // Import Redux actions
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart.items); // Access cart items from Redux state
   const dispatch = useDispatch(); // Redux dispatch
+  const [clickedButtons, setClickedButtons] = useState({}); // Track clicked state for each button
+
+  const handleRemoveFromCart = (bookId) => {
+    dispatch(removeFromCart(bookId)); // Dispatch Redux action to remove item
+    setClickedButtons((prevState) => ({
+      ...prevState,
+      [bookId]: true, // Mark the button as clicked
+    }));
+  };
 
   return (
     <section className="px-6 py-16 bg-white">
@@ -20,7 +29,7 @@ const Cart = () => {
             >
               <div className="h-48 bg-gray-100 rounded-lg mb-4">
                 <img
-                  src={book.coverImage || "https://via.placeholder.com/150"}
+                  src={book.image || "https://via.placeholder.com/150"}
                   alt={book.title}
                   className="h-full w-full object-cover rounded-lg"
                 />
@@ -31,10 +40,12 @@ const Cart = () => {
                 <strong>Rating:</strong> {book.rating} / 5
               </p>
               <button
-                className="w-full py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
-                onClick={() => dispatch(removeFromCart(book._id))}
+                className={`w-full py-2 text-gray-700 rounded-lg transition ${
+                  clickedButtons[book._id] ? "bg-pink-200" : "bg-pink-300 hover:bg-pink-400"
+                }`}
+                onClick={() => handleRemoveFromCart(book._id)}
               >
-                Remove from Cart
+                {clickedButtons[book._id] ? "Removed" : "Remove from Cart"}
               </button>
             </div>
           ))}

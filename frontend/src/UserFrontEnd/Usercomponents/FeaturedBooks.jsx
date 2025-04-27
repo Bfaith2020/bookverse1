@@ -90,7 +90,7 @@ export default function FeaturedBooks() {
             >
               <div className="h-48 bg-gray-100 rounded-lg mb-4">
                 <img
-                  src={book.coverImage || "https://via.placeholder.com/150"}
+                  src={book.image || "https://via.placeholder.com/150"}
                   alt={book.title}
                   className="h-full w-full object-cover rounded-lg"
                 />

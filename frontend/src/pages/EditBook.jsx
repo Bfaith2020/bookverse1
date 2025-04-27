@@ -8,7 +8,11 @@ import { useSnackbar } from 'notistack';
 const EditBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [publishYear, setPublishYear] = useState('');
+  const [genre, setGenre] = useState('');
+  const [description, setDescription] = useState('');
+  const [image, setImage] = useState('');
+  const [price, setPrice] = useState('');
+  const [isbn, setIsbn] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const {id} = useParams();
@@ -17,11 +21,15 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/books/${id}`) // Ensure this matches the backend's URL
+      .get(`http://localhost:5555/books/${id}`)
       .then((response) => {
         setAuthor(response.data.author);
-        setPublishYear(response.data.publishYear);
         setTitle(response.data.title);
+        setGenre(response.data.genre);
+        setDescription(response.data.description);
+        setImage(response.data.image);
+        setPrice(response.data.price);
+        setIsbn(response.data.isbn);
         setLoading(false);
       })
       .catch((error) => {
@@ -29,17 +37,21 @@ const EditBook = () => {
         alert('An error happened. Please check console');
         console.log(error);
       });
-  }, [])
-  
+  }, [id])
+
   const handleEditBook = () => {
     const data = {
       title,
       author,
-      publishYear,
+      genre,
+      description,
+      image,
+      price,
+      isbn,
     };
     setLoading(true);
     axios
-      .put(`http://localhost:5555/books/${id}`, data) // Ensure this matches the backend's URL
+      .put(`http://localhost:5555/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Edited successfully', { variant: 'success' });
@@ -77,11 +89,46 @@ const EditBook = () => {
           />
         </div>
         <div className='my-4'>
-          <label className='text-xl mr-4 text-gray-500'>Publish Year</label>
+          <label className='text-xl mr-4 text-gray-500'>Genre</label>
+          <input
+            type='text'
+            value={genre}
+            onChange={(e) => setGenre(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2  w-full '
+          />
+        </div>
+        <div className='my-4'>
+          <label className='text-xl mr-4 text-gray-500'>Description</label>
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2  w-full '
+          />
+        </div>
+        <div className='my-4'>
+          <label className='text-xl mr-4 text-gray-500'>Image URL</label>
+          <input
+            type='text'
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2  w-full '
+          />
+        </div>
+        <div className='my-4'>
+          <label className='text-xl mr-4 text-gray-500'>Price</label>
           <input
             type='number'
-            value={publishYear}
-            onChange={(e) => setPublishYear(e.target.value)}
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            className='border-2 border-gray-500 px-4 py-2  w-full '
+          />
+        </div>
+        <div className='my-4'>
+          <label className='text-xl mr-4 text-gray-500'>ISBN</label>
+          <input
+            type='text'
+            value={isbn}
+            onChange={(e) => setIsbn(e.target.value)}
             className='border-2 border-gray-500 px-4 py-2  w-full '
           />
         </div>

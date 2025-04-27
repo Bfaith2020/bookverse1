@@ -13,9 +13,14 @@ const BookSingleCard = ({ book }) => {
   return (
     <div className='border-2 border-gray-500 rounded-lg px-4 py-2 m-4 relative hover:shadow-xl'>
       <h2 className='absolute top-1 right-2 px-4 py-1 bg-red-300 rounded-lg'>
-        {book.publishYear}
+        {book.genre}
       </h2>
       <h4 className='my-2 text-gray-500'>{book._id}</h4>
+      <div className='flex justify-center items-center gap-x-2'>
+        {book.image && (
+          <img src={book.image} alt={book.title} className="w-24 h-32 object-cover rounded" />
+        )}
+      </div>
       <div className='flex justify-start items-center gap-x-2'>
         <PiBookOpenTextLight className='text-red-300 text-2xl' />
         <h2 className='my-1'>{book.title}</h2>
@@ -23,6 +28,12 @@ const BookSingleCard = ({ book }) => {
       <div className='flex justify-start items-center gap-x-2'>
         <BiUserCircle className='text-red-300 text-2xl' />
         <h2 className='my-1'>{book.author}</h2>
+      </div>
+      <div className='my-2'>
+        <span className='font-semibold'>Price:</span> {book.price}
+      </div>
+      <div className='my-2'>
+        <span className='font-semibold'>ISBN:</span> {book.isbn}
       </div>
       <div className='flex justify-between items-center gap-x-2 mt-4 p-4'>
         <BiShow
