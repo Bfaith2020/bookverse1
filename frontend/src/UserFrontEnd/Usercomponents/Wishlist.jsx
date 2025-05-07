@@ -1,6 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux"; // Import useSelector
 
-const Wishlist = ({ wishlist }) => {
+const Wishlist = () => {
+  const wishlist = useSelector((state) => state.wishlist.items); // Access wishlist from Redux store
+
   return (
     <div className="px-6 py-10">
       <h1 className="text-3xl font-bold mb-6">Your Wishlist</h1>
@@ -8,11 +11,11 @@ const Wishlist = ({ wishlist }) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {wishlist.map((book) => (
             <div
-              key={book.id}
+              key={book._id}
               className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition"
             >
               <img
-                src={book.coverImage || "https://via.placeholder.com/150"}
+                src={book.image || "https://via.placeholder.com/150"}
                 alt={book.title}
                 className="w-full h-48 object-cover rounded-lg mb-4"
               />

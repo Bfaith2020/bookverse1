@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { User } from "react-feather"; // Ensure react-feather is installed
+import { User } from "react-feather";
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 export default function UserMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,7 @@ export default function UserMenu() {
               View Order History
             </li>
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-              Wishlist
+              <Link to="/userfrontend/wishlist">Wishlist</Link> {/* Added navigation */}
             </li>
             <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
               Help Centre
