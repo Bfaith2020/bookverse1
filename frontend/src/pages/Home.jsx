@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Spinner from '../components/Spinner';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineEdit } from 'react-icons/ai';
 import { BsInfoCircle } from 'react-icons/bs';
 import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
@@ -12,6 +12,7 @@ const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showType, setShowType] = useState('table');
+  const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
@@ -27,8 +28,18 @@ const Home = () => {
       });
   }, []);
 
+  const goToUserFrontend = () => {
+    navigate('/userfrontend'); // Navigate to the userfrontend
+  };
+
   return (
     <div className='p-4'>
+      <div className='flex justify-between items-center'>
+        <h1 className='text-3xl my-8'>Books List</h1>
+        <Link to='/books/create'>
+          <MdOutlineAddBox className='text-sky-800 text-4xl' />
+        </Link>
+      </div>
       <div className='flex justify-center items-center gap-x-4'>
         <button
           className='bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg'
@@ -43,11 +54,13 @@ const Home = () => {
           Card
         </button>
       </div>
-      <div className='flex justify-between items-center'>
-        <h1 className='text-3xl my-8'>Books List</h1>
-        <Link to='/books/create'>
-          <MdOutlineAddBox className='text-sky-800 text-4xl' />
-        </Link>
+      <div className='my-4'>
+        <button
+          onClick={goToUserFrontend}
+          className='bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-lg'
+        >
+          Back to Homepage
+        </button>
       </div>
       {loading ? (
         <Spinner />

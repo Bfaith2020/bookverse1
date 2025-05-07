@@ -24,6 +24,11 @@ const Navbar = () => {
         <Link to="/userfrontend/cart">
           <FaShoppingCart className="cursor-pointer hover:text-pink-600" />
         </Link>
+        <Link to="/login"> {/* Added Login button */}
+          <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+            Login
+          </button>
+        </Link>
         <FaUserCircle
           className="cursor-pointer hover:text-pink-600"
           onClick={toggleSidebar}
