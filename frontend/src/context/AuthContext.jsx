@@ -22,10 +22,10 @@ export const AuthProvide = ({ children }) => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       setCurrentUser(userCredential.user); // Update currentUser state
-      return userCredential;
+      return userCredential; // Ensure userCredential is returned
     } catch (error) {
       console.error("Error during registration:", error.message);
-      throw error;
+      throw new Error(error.message || "Failed to register. Please try again.");
     }
   };
 
@@ -62,10 +62,12 @@ export const AuthProvide = ({ children }) => {
   const logout = async () => {
     try {
       await signOut(auth);
-      setCurrentUser(null);
+      setCurrentUser(null); // Reset currentUser state
       setIsAdmin(false); // Reset isAdmin state
+      navigate("/userfrontend"); // Redirect to login page after logout
     } catch (error) {
       console.error("Error during logout:", error.message);
+      throw new Error("Failed to log out. Please try again.");
     }
   };
 

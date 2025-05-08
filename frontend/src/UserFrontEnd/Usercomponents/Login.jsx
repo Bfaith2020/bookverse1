@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
-import { useAuth } from "../../context/AuthContext"; // Updated path to AuthContext
+import { useAuth } from "../../context/AuthContext";
 import { FaGoogle } from "react-icons/fa";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const [isSignUp, setIsSignUp] = useState(false); // State to toggle between login and sign-up
   const [message, setMessage] = useState("");
-  const { loginUser, signInWithGoogle } = useAuth(); // Access loginUser and signInWithGoogle from AuthContext
+  const { loginUser, signInWithGoogle, registerUser } = useAuth();
   const navigate = useNavigate();
   const {
     register,
@@ -17,20 +18,29 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      await loginUser(data.email, data.password); // Use loginUser from AuthContext
-      alert("Login successful!");
+      if (isSignUp) {
+        await registerUser(data.email, data.password); // Register user if in sign-up mode
+        alert("Account created successfully!");
+      } else {
+        await loginUser(data.email, data.password); // Login user if in login mode
+        alert("Login successful!");
+      }
       navigate("/"); // Redirect to the home page
     } catch (error) {
-      setMessage("Please provide a valid email and password");
+      setMessage(
+        isSignUp
+          ? "Failed to create an account. Please try again."
+          : "Please provide a valid email and password"
+      );
       console.error(error);
     }
   };
 
   const handleGoogleSignIn = async () => {
     try {
-      await signInWithGoogle(); // Use signInWithGoogle from AuthContext
+      await signInWithGoogle();
       alert("Login successful!");
-      navigate("/"); // Redirect to the home page
+      navigate("/");
     } catch (error) {
       alert("Google sign-in failed!");
       console.error(error);
@@ -40,7 +50,7 @@ const Login = () => {
   return (
     <StyledWrapper>
       <form className="form_main" onSubmit={handleSubmit(onSubmit)}>
-        <p className="heading">Login</p>
+        <p className="heading">{isSignUp ? "Sign Up" : "Login"}</p>
         <div className="inputContainer">
           <svg
             viewBox="0 0 16 16"
@@ -81,11 +91,21 @@ const Login = () => {
         </div>
         {message && <p className="errorMessage">{message}</p>}
         <button id="button" type="submit">
-          Submit
+          {isSignUp ? "Sign Up" : "Login"}
         </button>
-        <div className="signupContainer">
-          <p>Don't have an account?</p>
-          <Link to="/register">Sign up</Link>
+        <div className="toggleContainer">
+          <p>
+            {isSignUp
+              ? "Already have an account?"
+              : "Don't have an account?"}
+          </p>
+          <button
+            type="button"
+            className="toggleButton"
+            onClick={() => setIsSignUp(!isSignUp)}
+          >
+            {isSignUp ? "Login" : "Sign Up"}
+          </button>
         </div>
         <div className="googleSignIn">
           <button onClick={handleGoogleSignIn} type="button">
@@ -196,6 +216,27 @@ const StyledWrapper = styled.div`
   #button:hover::after {
     transform: translateX(600px);
     transition-duration: 0.5s;
+  }
+
+  .toggleContainer {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toggleButton {
+    background: none;
+    border: none;
+    color: #8000ff;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .toggleButton:hover {
+    color: #5a00b3;
   }
 
   .signupContainer {
