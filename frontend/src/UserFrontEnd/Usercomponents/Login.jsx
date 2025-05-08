@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useForm } from "react-hook-form";
-import { useAuth } from "../../context/AuthContext"; // Corrected path
+import { useAuth } from "../../context/AuthContext"; // Updated path to AuthContext
 import { FaGoogle } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
   const [message, setMessage] = useState("");
-  const { loginUser, signInWithGoogle } = useAuth();
+  const { loginUser, signInWithGoogle } = useAuth(); // Access loginUser and signInWithGoogle from AuthContext
   const navigate = useNavigate();
   const {
     register,
@@ -17,9 +17,9 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      await loginUser(data.email, data.password);
+      await loginUser(data.email, data.password); // Use loginUser from AuthContext
       alert("Login successful!");
-      navigate("/");
+      navigate("/"); // Redirect to the home page
     } catch (error) {
       setMessage("Please provide a valid email and password");
       console.error(error);
@@ -28,9 +28,9 @@ const Login = () => {
 
   const handleGoogleSignIn = async () => {
     try {
-      await signInWithGoogle();
+      await signInWithGoogle(); // Use signInWithGoogle from AuthContext
       alert("Login successful!");
-      navigate("/");
+      navigate("/"); // Redirect to the home page
     } catch (error) {
       alert("Google sign-in failed!");
       console.error(error);
@@ -99,6 +99,12 @@ const Login = () => {
 };
 
 const StyledWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f9f9f9; /* Optional background color */
+
   .form_main {
     width: 280px;
     display: flex;

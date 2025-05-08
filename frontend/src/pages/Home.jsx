@@ -7,11 +7,13 @@ import { BsInfoCircle } from 'react-icons/bs';
 import { MdOutlineAddBox, MdOutlineDelete } from 'react-icons/md';
 import BooksTable from '../components/home/BooksTable';
 import BooksCard from '../components/home/BooksCard';
+import { useAuth } from '../context/AuthContext'; // Import useAuth
 
 const Home = () => {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showType, setShowType] = useState('table');
+  const { logout } = useAuth(); // Access logout from AuthContext
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -28,8 +30,13 @@ const Home = () => {
       });
   }, []);
 
-  const goToUserFrontend = () => {
-    navigate('/userfrontend'); // Navigate to the userfrontend
+  const handleLogout = async () => {
+    try {
+      await logout(); // Call the logout function
+      navigate('/userfrontend'); // Redirect to userfrontend
+    } catch (error) {
+      console.error('Error during logout:', error);
+    }
   };
 
   return (
@@ -56,10 +63,10 @@ const Home = () => {
       </div>
       <div className='my-4'>
         <button
-          onClick={goToUserFrontend}
-          className='bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-lg'
+          onClick={handleLogout} // Updated to call handleLogout
+          className='bg-red-500 hover:bg-red-700 text-white px-4 py-2 rounded-lg'
         >
-          Back to Homepage
+          Logout
         </button>
       </div>
       {loading ? (
@@ -68,7 +75,7 @@ const Home = () => {
         <BooksTable books={books} />
       ) : (
         <BooksCard books={books} />
-      )}
+      )}     
     </div>
   );
 };

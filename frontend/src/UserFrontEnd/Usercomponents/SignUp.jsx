@@ -16,11 +16,19 @@ const SignUp = () => {
 
   const onSubmit = async (data) => {
     try {
-      await registerUser(data.email, data.password);
-      alert("Sign-up successful!");
-      navigate("/login"); // Redirect to login page after successful sign-up
+      const user = await registerUser(data.email, data.password); // Ensure registerUser is correctly implemented
+      if (user) {
+        alert("Sign-up successful!");
+        navigate("/dashboard"); // Redirect to the user dashboard or desired page
+      } else {
+        setMessage("Failed to sign up. Please check your input and try again.");
+      }
     } catch (error) {
-      setMessage("Failed to sign up. Please try again.");
+      if (error.response && error.response.data) {
+        setMessage(error.response.data.message || "Failed to sign up. Please try again.");
+      } else {
+        setMessage("An unexpected error occurred. Please try again.");
+      }
       console.error(error);
     }
   };

@@ -1,13 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../Firebase/firebase.config";
-import {
-  createUserWithEmailAndPassword,
-  GoogleAuthProvider,
-  onAuthStateChanged,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  signOut,
-} from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
@@ -20,27 +14,72 @@ const googleProvider = new GoogleAuthProvider();
 export const AuthProvide = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false); // Add isAdmin state
+  const navigate = useNavigate();
 
+  // register a user
   const registerUser = async (email, password) => {
-    return await createUserWithEmailAndPassword(auth, email, password);
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      setCurrentUser(userCredential.user); // Update currentUser state
+      return userCredential;
+    } catch (error) {
+      console.error("Error during registration:", error.message);
+      throw error;
+    }
   };
 
+  // login the user (unchanged)
   const loginUser = async (email, password) => {
-    return await signInWithEmailAndPassword(auth, email, password);
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      setCurrentUser(userCredential.user);
+
+      // Check if the logged-in user is an admin
+      const isAdmin = email === import.meta.env.VITE_ADMIN_EMAIL;
+      setIsAdmin(isAdmin); // Update isAdmin state in context
+
+      // Redirect based on admin status
+      if (isAdmin) {
+        navigate("/"); // Admin dashboard route
+      } else {
+        navigate("/userfrontend"); // Default user route
+      }
+
+      return userCredential;
+    } catch (error) {
+      console.error("Error during login:", error.message);
+      throw error;
+    }
   };
 
+  // sign up with Google
   const signInWithGoogle = async () => {
     return await signInWithPopup(auth, googleProvider);
   };
 
-  const logout = () => {
-    return signOut(auth);
+  // logout the user
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      setCurrentUser(null);
+      setIsAdmin(false); // Reset isAdmin state
+    } catch (error) {
+      console.error("Error during logout:", error.message);
+    }
   };
 
+  // manage user
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
       setLoading(false);
+
+      if (user) {
+        // Check if the current user is an admin
+        const isAdmin = user.email === import.meta.env.VITE_ADMIN_EMAIL;
+        setIsAdmin(isAdmin);
+      }
     });
 
     return () => unsubscribe();
@@ -49,6 +88,7 @@ export const AuthProvide = ({ children }) => {
   const value = {
     currentUser,
     loading,
+    isAdmin, // Expose isAdmin in context
     registerUser,
     loginUser,
     signInWithGoogle,
