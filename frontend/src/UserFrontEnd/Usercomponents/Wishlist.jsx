@@ -1,8 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux"; // Import useSelector
+import { useSelector, useDispatch } from "react-redux"; // Import Redux hooks
+import { toggleWishlist } from "../redux/wishlistSlice"; // Import toggleWishlist action
+import { addToCart, removeFromCart } from "../redux/cartSlice"; // Import cart actions
 
 const Wishlist = () => {
   const wishlist = useSelector((state) => state.wishlist.items); // Access wishlist from Redux store
+  const cart = useSelector((state) => state.cart.items); // Access cart from Redux store
+  const dispatch = useDispatch(); // Redux dispatch
+
+  const isBookInCart = (id) => cart.some((item) => item._id === id); // Check if book is in cart
 
   return (
     <div className="px-6 py-10">
@@ -21,6 +27,29 @@ const Wishlist = () => {
               />
               <h3 className="text-lg font-semibold">{book.title}</h3>
               <p className="text-gray-600">{book.author}</p>
+              <div className="mt-4 space-y-2">
+                <button
+                  className="w-full py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+                  onClick={() => dispatch(toggleWishlist(book))} // Remove from wishlist
+                >
+                  Remove from Wishlist
+                </button>
+                {isBookInCart(book._id) ? (
+                  <button
+                    className="w-full py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+                    onClick={() => dispatch(removeFromCart(book._id))} // Remove from cart
+                  >
+                    Remove from Cart
+                  </button>
+                ) : (
+                  <button
+                    className="w-full py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600"
+                    onClick={() => dispatch(addToCart(book))} // Add to cart
+                  >
+                    Add to Cart
+                  </button>
+                )}
+              </div>
             </div>
           ))}
         </div>

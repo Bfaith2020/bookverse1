@@ -41,7 +41,7 @@ const Navbar = () => {
         </Link>
         {!currentUser && (
           <Link to="/login">
-            <button className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+            <button className="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-500">
               Login
             </button>
           </Link>

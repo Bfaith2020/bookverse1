@@ -3,14 +3,15 @@ import axios from "axios";
 import { Heart } from "react-feather"; // Ensure you have react-feather installed
 import { useDispatch, useSelector } from "react-redux"; // Import Redux hooks
 import { addToCart, removeFromCart } from "../redux/cartSlice"; // Corrected path
+import { toggleWishlist } from "../redux/wishlistSlice"; // Import toggleWishlist action
 
 export default function FeaturedBooks() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedBook, setSelectedBook] = useState(null);
-  const [favorites, setFavorites] = useState([]); // State for favorites
   const [currentIndex, setCurrentIndex] = useState(0); // Index for carousel
   const cart = useSelector((state) => state.cart.items); // Access cart state
+  const wishlist = useSelector((state) => state.wishlist.items); // Access wishlist from Redux
   const dispatch = useDispatch(); // Redux dispatch
 
   // Random reviews and ratings generator
@@ -65,7 +66,7 @@ export default function FeaturedBooks() {
         prevIndex + 8 >= books.length ? 0 : prevIndex + 8
       );
     }, 120000); // Change every 2 minutes
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // Cleanup interval on unmount
   }, [books]);
 
   const handleBookClick = (book) => {
@@ -76,14 +77,13 @@ export default function FeaturedBooks() {
     setSelectedBook(null);
   };
 
-  // Toggle favorite functionality
-  const toggleFavorite = (id) => {
-    setFavorites((prev) =>
-      prev.includes(id) ? prev.filter((bookId) => bookId !== id) : [...prev, id]
-    );
+  const isBookInCart = (id) => cart.some((item) => item._id === id); // Check if book is in cart
+
+  const toggleFavorite = (book) => {
+    dispatch(toggleWishlist(book)); // Dispatch toggleWishlist action
   };
 
-  const isBookInCart = (id) => cart.some((item) => item._id === id); // Check if book is in cart
+  const isFavorite = (id) => wishlist.some((item) => item._id === id); // Check if book is in wishlist
 
   const displayedBooks = books.slice(currentIndex, currentIndex + 8);
 
@@ -135,13 +135,13 @@ export default function FeaturedBooks() {
               )}
               <Heart
                 className={`absolute top-4 right-4 cursor-pointer transition ${
-                  favorites.includes(book._id)
+                  isFavorite(book._id)
                     ? "text-pink-600 fill-pink-600"
                     : "text-gray-400"
                 }`}
                 onClick={(e) => {
                   e.stopPropagation(); // Prevent triggering the modal
-                  toggleFavorite(book._id);
+                  toggleFavorite(book);
                 }}
               />
             </div>
