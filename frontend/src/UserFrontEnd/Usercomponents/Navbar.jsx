@@ -10,6 +10,43 @@ const Navbar = () => {
   const [showInfo, setShowInfo] = useState(false); // State to toggle user info
   const { currentUser, logout } = useAuth();
 
+  useEffect(() => {
+    if (currentUser && currentUser.photoURL) {
+      setAvatarUrl(currentUser.photoURL); // Set avatar URL from user data
+    } else {
+      setAvatarUrl(""); // Reset avatar URL when user logs out
+    }
+  }, [currentUser]);
+
+  const getUserIcon = () => {
+    if (avatarUrl) {
+      return (
+        <img
+          src={avatarUrl}
+          alt="User Avatar"
+          className="w-8 h-8 rounded-full cursor-pointer"
+          onClick={toggleSidebar}
+        />
+      );
+    } else if (currentUser && currentUser.email && currentUser.email[0].toLowerCase() === "a") {
+      return (
+        <div
+          className="w-8 h-8 rounded-full bg-pink-500 text-white flex items-center justify-center font-bold cursor-pointer"
+          onClick={toggleSidebar}
+        >
+          {currentUser.email[0].toUpperCase()}
+        </div>
+      );
+    } else {
+      return (
+        <FaUserCircle
+          className="w-8 h-8 text-gray-700 cursor-pointer"
+          onClick={toggleSidebar}
+        />
+      );
+    }
+  };
+
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
   };
@@ -22,8 +59,6 @@ const Navbar = () => {
       console.error("Error during logout:", error.message);
     }
   };
-
-
 
   return (
     <header className="flex items-center justify-between px-6 py-4 shadow-md bg-white sticky top-0 z-50">
@@ -39,18 +74,15 @@ const Navbar = () => {
         <Link to="/userfrontend/cart">
           <FaShoppingCart className="cursor-pointer hover:text-pink-600" />
         </Link>
-        {!currentUser && (
+        {!currentUser ? (
           <Link to="/login">
-            <button className="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-500">
+            <button className="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600">
               Login
             </button>
           </Link>
+        ) : (
+          getUserIcon()
         )}
-        <button
-          onClick={toggleSidebar}
-        >
-          <FaUserCircle className="w-5 h-5 text-gray-700" />
-        </button>
       </div>
       <div
         className={`fixed top-0 right-0 h-full w-48 bg-white shadow-lg transform transition-transform duration-300 ${
