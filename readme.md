@@ -1,3 +1,9 @@
+link to my project: https://bookstore12-99bbb.web.app/userfrontend
+Admin credentials:
+ADMIN EMAIL=admin123@gmail.com
+ADMIN PASSWORD=Admin2025
+
+
 # Bookverse
 
 Bookverse is a simple RESTful API for managing a collection of books. It allows users to create, read, update, and delete book records in a MongoDB database.
